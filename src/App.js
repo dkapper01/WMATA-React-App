@@ -6,6 +6,7 @@ import NextTrain from "./components/NextTrain";
 function App() {
   return (
     <AppWrapper>
+      <h2>Pick a line and see when the next train is coming</h2>
       <SelectList />
     </AppWrapper>
   );
@@ -14,6 +15,8 @@ function App() {
 export default App;
 
 const AppWrapper = styled.div`
-  width: 960px;
+  min-width: 960px;
+  width: 80vh;
   margin: 0 auto;
+  text-align: center;
 `;
