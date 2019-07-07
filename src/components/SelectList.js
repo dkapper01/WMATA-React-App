@@ -105,6 +105,7 @@ function SelectList() {
 
   return (
     <AppWrapper>
+      <h1>{process.env.API_URL}</h1>
       <select
         value={selectValue}
         onChange={e => setSelectValue(e.target.value)}

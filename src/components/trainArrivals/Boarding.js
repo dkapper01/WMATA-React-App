@@ -3,7 +3,7 @@ import React from "react";
 const Boarding = ({ item }) => {
   return (
     <div>
-      {item.Line} <b>Boarding Now</b>
+      {item.Line} is <b>Boarding Now</b>
     </div>
   );
 };
