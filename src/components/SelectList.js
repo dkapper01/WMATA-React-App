@@ -7,7 +7,6 @@ function SelectList() {
   const [data, setData] = useState({ Stations: [] });
   const [selectValue, setSelectValue] = useState("BL");
   const [isLoading, setIsLoading] = useState(false);
-  const [isToggle, setToggle] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import SelectList from "./components/SelectList";
-import NextTrain from "./components/NextTrain";
 
 function App() {
   return (

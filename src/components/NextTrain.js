@@ -40,7 +40,7 @@ function NextTrain({ Code }) {
           </div>
         );
       case "---":
-        return <div>TEST</div>;
+        return <div>Empty</div>;
       default:
         return (
           <div>
