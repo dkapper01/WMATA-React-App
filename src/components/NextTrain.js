@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import axios from "axios";
 import Coming from "./trainArrivals/Coming";
 import Boarding from "./trainArrivals/Boarding";
@@ -51,22 +50,19 @@ function NextTrain({ Code }) {
   }
 
   return (
-    <AppWrapper>
+    <div>
       {isLoading ? (
         <div>Loadings</div>
       ) : (
         <div>
           <button onClick={() => setToggle(!isToggle)}>Next Train</button>
-
           {data.Trains.map((item, index) => (
             <div key={index}>{isToggle && TrainComing(item)}</div>
           ))}
         </div>
       )}
-    </AppWrapper>
+    </div>
   );
 }
 
 export default NextTrain;
-
-const AppWrapper = styled.div``;

@@ -5,7 +5,7 @@ import SelectList from "./components/SelectList";
 function App() {
   return (
     <AppWrapper>
-      <h2>Pick a line and see when the next train is coming</h2>
+      <h2>Pick a line and see when the next train comes</h2>
       <SelectList />
     </AppWrapper>
   );

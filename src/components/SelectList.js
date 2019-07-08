@@ -21,27 +21,6 @@ function SelectList() {
     fetchData();
   }, [selectValue]);
 
-  console.log(data.Stations);
-
-  const blue = {
-    backgroundColor: "blue"
-  };
-  const green = {
-    backgroundColor: "green"
-  };
-  const orange = {
-    backgroundColor: "orange"
-  };
-  const red = {
-    backgroundColor: "red"
-  };
-  const silver = {
-    backgroundColor: "silver"
-  };
-  const yellow = {
-    backgroundColor: "yellow"
-  };
-
   function LineCodeColor(colorCode) {
     switch (colorCode) {
       case "BL":
@@ -148,7 +127,7 @@ const AppWrapper = styled.div`
 
   select {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 1.3rem;
   }
   ul {
@@ -173,3 +152,10 @@ const TrainStop = styled.li`
     1px 1px 0 #000;
   text-align: left;
 `;
+
+const blue = { backgroundColor: "blue" };
+const green = { backgroundColor: "green" };
+const orange = { backgroundColor: "orange" };
+const red = { backgroundColor: "red" };
+const silver = { backgroundColor: "silver" };
+const yellow = { backgroundColor: "yellow" };
