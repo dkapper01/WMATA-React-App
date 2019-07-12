@@ -21,67 +21,26 @@ function SelectList() {
     fetchData();
   }, [selectValue]);
 
-  function LineCodeColor(colorCode) {
-    switch (colorCode) {
-      case "BL":
-        return (
-          <TrainStop style={blue}>
-            <span role="img" aria-label="train">
-              🚇
-            </span>{" "}
-            Blue
-          </TrainStop>
-        );
-      case "GR":
-        return (
-          <TrainStop style={green}>
-            <span role="img" aria-label="train">
-              🚇
-            </span>{" "}
-            Green
-          </TrainStop>
-        );
-      case "OR":
-        return (
-          <TrainStop style={orange}>
-            <span role="img" aria-label="train">
-              🚇
-            </span>{" "}
-            Orange
-          </TrainStop>
-        );
-      case "RD":
-        return (
-          <TrainStop style={red}>
-            <span role="img" aria-label="train">
-              🚇
-            </span>{" "}
-            Red
-          </TrainStop>
-        );
-      case "SV":
-        return (
-          <TrainStop style={silver}>
-            <span role="img" aria-label="train">
-              🚇
-            </span>{" "}
-            Silver
-          </TrainStop>
-        );
-      case "YL":
-        return (
-          <TrainStop style={yellow}>
-            <span role="img" aria-label="train">
-              🚇
-            </span>{" "}
-            Yellow
-          </TrainStop>
-        );
-      default:
-        return null;
-    }
-  }
+  const colors = {
+    BL: "blue",
+    GR: "green",
+    RD: "red",
+    YL: "yellow",
+    SV: "silver",
+    OR: "orange"
+  };
 
+  function NewColors(color) {
+    return (
+      <TrainStop style={{"backgroundColor": colors[color]}}>
+        <span role="img" aria-label="train">
+          🚇
+        </span>{" "}
+        {colors[color]}
+      </TrainStop>
+    );
+  }
+  
   return (
     <AppWrapper>
       <h1>{process.env.API_URL}</h1>
@@ -105,10 +64,10 @@ function SelectList() {
               <b>{item.Name}</b>: {item.Address.Street}{" "}
               <NextTrain Code={item.Code} />
               <ul>
-                {item.LineCode1 ? LineCodeColor(item.LineCode1) : ""}
-                {item.LineCode2 ? LineCodeColor(item.LineCode2) : ""}
-                {item.LineCode3 ? LineCodeColor(item.LineCode3) : ""}
-                {item.LineCode4 ? LineCodeColor(item.LineCode4) : ""}
+                {item.LineCode1 ? NewColors(item.LineCode1) : ""}
+                {item.LineCode2 ? NewColors(item.LineCode2) : ""}
+                {item.LineCode3 ? NewColors(item.LineCode3) : ""}
+                {item.LineCode4 ? NewColors(item.LineCode4) : ""}
               </ul>
             </div>
           ))}
@@ -153,9 +112,9 @@ const TrainStop = styled.li`
   text-align: left;
 `;
 
-const blue = { backgroundColor: "blue" };
-const green = { backgroundColor: "green" };
-const orange = { backgroundColor: "orange" };
-const red = { backgroundColor: "red" };
-const silver = { backgroundColor: "silver" };
-const yellow = { backgroundColor: "yellow" };
+// const blue = { backgroundColor: "blue" };
+// const green = { backgroundColor: "green" };
+// const orange = { backgroundColor: "orange" };
+// const red = { backgroundColor: "red" };
+// const silver = { backgroundColor: "silver" };
+// const yellow = { backgroundColor: "yellow" };

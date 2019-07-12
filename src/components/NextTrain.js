@@ -22,8 +22,6 @@ function NextTrain({ Code }) {
     fetchData();
   }, [Code]);
 
-  console.log(Code + " test");
-
   function TrainComing(item) {
     switch (item.Min) {
       case "ARR":
