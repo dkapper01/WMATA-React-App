@@ -26,7 +26,7 @@ function SelectList() {
       case "BL":
         return (
           <TrainStop style={blue}>
-            <span role="img" aria-label="sheep">
+            <span role="img" aria-label="train">
               🚇
             </span>{" "}
             Blue
@@ -35,7 +35,7 @@ function SelectList() {
       case "GR":
         return (
           <TrainStop style={green}>
-            <span role="img" aria-label="sheep">
+            <span role="img" aria-label="train">
               🚇
             </span>{" "}
             Green
@@ -44,7 +44,7 @@ function SelectList() {
       case "OR":
         return (
           <TrainStop style={orange}>
-            <span role="img" aria-label="sheep">
+            <span role="img" aria-label="train">
               🚇
             </span>{" "}
             Orange
@@ -53,7 +53,7 @@ function SelectList() {
       case "RD":
         return (
           <TrainStop style={red}>
-            <span role="img" aria-label="sheep">
+            <span role="img" aria-label="train">
               🚇
             </span>{" "}
             Red
@@ -62,7 +62,7 @@ function SelectList() {
       case "SV":
         return (
           <TrainStop style={silver}>
-            <span role="img" aria-label="sheep">
+            <span role="img" aria-label="train">
               🚇
             </span>{" "}
             Silver
@@ -71,7 +71,7 @@ function SelectList() {
       case "YL":
         return (
           <TrainStop style={yellow}>
-            <span role="img" aria-label="sheep">
+            <span role="img" aria-label="train">
               🚇
             </span>{" "}
             Yellow

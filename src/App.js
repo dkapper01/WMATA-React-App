@@ -5,6 +5,9 @@ import SelectList from "./components/SelectList";
 function App() {
   return (
     <AppWrapper>
+      <a href="www.danielkapper.com" target="_blank">
+        www.danielkapper.com
+      </a>
       <h2>Pick a line and see when the next train comes</h2>
       <SelectList />
     </AppWrapper>
